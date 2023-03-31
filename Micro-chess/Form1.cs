@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Media.Imaging;
 
 namespace Micro_chess
 {
@@ -284,8 +281,7 @@ namespace Micro_chess
             selectedPiece = null;
             whiteTurn = true;
             startSeed = GetRandomSeed();
-            breadcrumbs.Add(startSeed);
-            RenderBoard(startSeed);
+            AddBreadcrumb(startSeed);
             pnlVictory.Visible = false;
         }
 
